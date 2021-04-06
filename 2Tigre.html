@@ -1,0 +1,664 @@
+<html>
+	<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	 
+	<link href="ensopadosm12.css" rel="stylesheet" type="text/css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<title> Sant Jordi 2021 </title>
+	<script type="text/javascript">
+		function error()
+		{
+			var v = document.getElementById("error");
+			v.style.display = "block";
+			var v = document.getElementById("correcte");
+			v.style.display = "none";
+		}
+		
+		function correcte()
+		{
+			var v = document.getElementById("correcte");
+			v.style.display = "block";
+			var v = document.getElementById("error");
+			v.style.display = "none";
+		}
+	</script>
+	
+	<style type="text/css">
+		@viewport {
+		  width: device-width ;
+		  zoom: 1.0 ;
+		} 
+		
+		@-ms-viewport {
+		  width: device-width ;
+		} 
+		
+		div.full
+		{
+			width: 95%;
+			padding: 10px;
+			//border: 2px solid #000;
+			border-radius: 15px;
+			-moz-border-radius: 15px;
+			text-align: center;
+			//background-color: #DDDDDD;
+			margin: auto;
+		}
+		
+		input.button{
+			font-family:'Garamond';
+			font-size:3vw;
+			width:50%;
+			margin-bottom: 2vw;
+		}
+		
+		div.pregunta{
+			font-family:'Garamond';
+			font-size:5vw;
+			padding: 20px 5px 20px 5px;
+		}
+		
+		div.resposta{
+			font-family:'Garamond';
+			font-size:5vw;
+			color:darkgreen;
+			font-weight:bold;
+			display: none;
+		}
+		
+		div.respostaerror{
+			font-family:'Garamond';
+			font-size:5vw;
+			color:darkred;
+			font-weight:bold;
+			display: none;
+		}
+		
+		.responsive {
+			width: 100%;
+			height: auto;
+		}
+		
+		
+		</style>
+	
+	</head>
+	
+	
+	<body>
+			<!-- millor amb imatge que potser no es veu bé el tipus de lletra -->
+			<div><img src="sant-jordi-capcalera.jpg" alt="Sant Jordi" class="responsive"></div>
+			
+			<script>var validarPalabra=[];var palabrasSopa=[];var palabrasSopaMostrar=[]; var cantidadDePalabras=9</script><script>validarPalabra[1]='2-10/10-2'; palabrasSopa[1]='CAPUTXETA'; palabrasSopaMostrar[1]='CAPUTXETA'</script><script>validarPalabra[8]='10-9/2-1'; palabrasSopa[8]='LLENYADOR'; palabrasSopaMostrar[8]='LLENYADOR'</script><script>validarPalabra[2]='4-10/11-10'; palabrasSopa[2]='VERMELLA'; palabrasSopaMostrar[2]='VERMELLA'</script><script>validarPalabra[5]='11-1/11-7'; palabrasSopa[5]='CISTELL'; palabrasSopaMostrar[5]='CISTELL'</script><script>validarPalabra[7]='2-6/2-9'; palabrasSopa[7]='CASA'; palabrasSopaMostrar[7]='CASA'</script><script>validarPalabra[6]='6-11/9-11'; palabrasSopa[6]='BOSC'; palabrasSopaMostrar[6]='BOSC'</script><script>validarPalabra[4]='4-4/4-7'; palabrasSopa[4]='MARE'; palabrasSopaMostrar[4]='MARE'</script><script>validarPalabra[3]='3-1/6-1'; palabrasSopa[3]='AVIA'; palabrasSopaMostrar[3]='AVIA'</script><script>validarPalabra[0]='7-7/10-4'; palabrasSopa[0]='LLOP'; palabrasSopaMostrar[0]='LLOP'</script> 
+<style>
+#palabras { margin: 0px;}
+table { font-family :monospace }
+.c0 { background-color: #16A; }
+.c1 { background-color: #A0A; }
+.c2 { background-color: #FF0; }
+.c3 { background-color: #85b; }
+.c4 { background-color: #aF8; }
+.c5 { background-color: #fda; }
+.c6 { background-color: #0F1; }
+.c7 { background-color: #FF0; }
+.c8 { background-color: #850; }
+.c9 { background-color: #a38; }
+.c10 { background-color: #f2a; }
+.c11 { background-color: #fd0; }
+.c12 { background-color: #f1a; }
+.c13 { background-color: #a4a; }
+.c14 { background-color: #2dd; }
+</style>
+
+<body>
+
+<div id="sopa"><br><h1>Sopa de Lletres: CAPUTXETA VERMELLA</h1>
+<div id="papel">
+<div id="1-1" class="cuadro bor1" style="left: 0px; top: 0px;">E</div><div id="1-2" class="cuadro bor1" style="left: 0px; top: 45.454545454545px;">R</div><div id="1-3" class="cuadro bor1" style="left: 0px; top: 90.909090909091px;">P</div><div id="1-4" class="cuadro bor1" style="left: 0px; top: 136.36363636364px;">S</div><div id="1-5" class="cuadro bor1" style="left: 0px; top: 181.81818181818px;">I</div><div id="1-6" class="cuadro bor1" style="left: 0px; top: 227.27272727273px;">G</div><div id="1-7" class="cuadro bor1" style="left: 0px; top: 272.72727272727px;">Q</div><div id="1-8" class="cuadro bor1" style="left: 0px; top: 318.18181818182px;">E</div><div id="1-9" class="cuadro bor1" style="left: 0px; top: 363.63636363636px;">C</div><div id="1-10" class="cuadro bor1" style="left: 0px; top: 409.09090909091px;">A</div><div id="1-11" class="cuadro borY" style="left: 0px; top: 454.54545454545px;">A</div><div id="2-1" class="cuadro bor1" style="left: 45.454545454545px; top: 0px;">L</div><div id="2-2" class="cuadro bor1" style="left: 45.454545454545px; top: 45.454545454545px;">P</div><div id="2-3" class="cuadro bor1" style="left: 45.454545454545px; top: 90.909090909091px;">U</div><div id="2-4" class="cuadro bor1" style="left: 45.454545454545px; top: 136.36363636364px;">E</div><div id="2-5" class="cuadro bor1" style="left: 45.454545454545px; top: 181.81818181818px;">T</div><div id="2-6" class="cuadro bor1" style="left: 45.454545454545px; top: 227.27272727273px;">C</div><div id="2-7" class="cuadro bor1" style="left: 45.454545454545px; top: 272.72727272727px;">A</div><div id="2-8" class="cuadro bor1" style="left: 45.454545454545px; top: 318.18181818182px;">S</div><div id="2-9" class="cuadro bor1" style="left: 45.454545454545px; top: 363.63636363636px;">A</div><div id="2-10" class="cuadro bor1" style="left: 45.454545454545px; top: 409.09090909091px;">C</div><div id="2-11" class="cuadro borY" style="left: 45.454545454545px; top: 454.54545454545px;">P</div><div id="3-1" class="cuadro bor1" style="left: 90.909090909091px; top: 0px;">A</div><div id="3-2" class="cuadro bor1" style="left: 90.909090909091px; top: 45.454545454545px;">L</div><div id="3-3" class="cuadro bor1" style="left: 90.909090909091px; top: 90.909090909091px;">O</div><div id="3-4" class="cuadro bor1" style="left: 90.909090909091px; top: 136.36363636364px;">A</div><div id="3-5" class="cuadro bor1" style="left: 90.909090909091px; top: 181.81818181818px;">P</div><div id="3-6" class="cuadro bor1" style="left: 90.909090909091px; top: 227.27272727273px;">S</div><div id="3-7" class="cuadro bor1" style="left: 90.909090909091px; top: 272.72727272727px;">M</div><div id="3-8" class="cuadro bor1" style="left: 90.909090909091px; top: 318.18181818182px;">E</div><div id="3-9" class="cuadro bor1" style="left: 90.909090909091px; top: 363.63636363636px;">A</div><div id="3-10" class="cuadro bor1" style="left: 90.909090909091px; top: 409.09090909091px;">O</div><div id="3-11" class="cuadro borY" style="left: 90.909090909091px; top: 454.54545454545px;">T</div><div id="4-1" class="cuadro bor1" style="left: 136.36363636364px; top: 0px;">V</div><div id="4-2" class="cuadro bor1" style="left: 136.36363636364px; top: 45.454545454545px;">E</div><div id="4-3" class="cuadro bor1" style="left: 136.36363636364px; top: 90.909090909091px;">E</div><div id="4-4" class="cuadro bor1" style="left: 136.36363636364px; top: 136.36363636364px;">M</div><div id="4-5" class="cuadro bor1" style="left: 136.36363636364px; top: 181.81818181818px;">A</div><div id="4-6" class="cuadro bor1" style="left: 136.36363636364px; top: 227.27272727273px;">R</div><div id="4-7" class="cuadro bor1" style="left: 136.36363636364px; top: 272.72727272727px;">E</div><div id="4-8" class="cuadro bor1" style="left: 136.36363636364px; top: 318.18181818182px;">P</div><div id="4-9" class="cuadro bor1" style="left: 136.36363636364px; top: 363.63636363636px;">C</div><div id="4-10" class="cuadro bor1" style="left: 136.36363636364px; top: 409.09090909091px;">V</div><div id="4-11" class="cuadro borY" style="left: 136.36363636364px; top: 454.54545454545px;">I</div><div id="5-1" class="cuadro bor1" style="left: 181.81818181818px; top: 0px;">I</div><div id="5-2" class="cuadro bor1" style="left: 181.81818181818px; top: 45.454545454545px;">I</div><div id="5-3" class="cuadro bor1" style="left: 181.81818181818px; top: 90.909090909091px;">B</div><div id="5-4" class="cuadro bor1" style="left: 181.81818181818px; top: 136.36363636364px;">N</div><div id="5-5" class="cuadro bor1" style="left: 181.81818181818px; top: 181.81818181818px;">O</div><div id="5-6" class="cuadro bor1" style="left: 181.81818181818px; top: 227.27272727273px;">J</div><div id="5-7" class="cuadro bor1" style="left: 181.81818181818px; top: 272.72727272727px;">U</div><div id="5-8" class="cuadro bor1" style="left: 181.81818181818px; top: 318.18181818182px;">A</div><div id="5-9" class="cuadro bor1" style="left: 181.81818181818px; top: 363.63636363636px;">E</div><div id="5-10" class="cuadro bor1" style="left: 181.81818181818px; top: 409.09090909091px;">E</div><div id="5-11" class="cuadro borY" style="left: 181.81818181818px; top: 454.54545454545px;">N</div><div id="6-1" class="cuadro bor1" style="left: 227.27272727273px; top: 0px;">A</div><div id="6-2" class="cuadro bor1" style="left: 227.27272727273px; top: 45.454545454545px;">A</div><div id="6-3" class="cuadro bor1" style="left: 227.27272727273px; top: 90.909090909091px;">A</div><div id="6-4" class="cuadro bor1" style="left: 227.27272727273px; top: 136.36363636364px;">U</div><div id="6-5" class="cuadro bor1" style="left: 227.27272727273px; top: 181.81818181818px;">Y</div><div id="6-6" class="cuadro bor1" style="left: 227.27272727273px; top: 227.27272727273px;">T</div><div id="6-7" class="cuadro bor1" style="left: 227.27272727273px; top: 272.72727272727px;">A</div><div id="6-8" class="cuadro bor1" style="left: 227.27272727273px; top: 318.18181818182px;">P</div><div id="6-9" class="cuadro bor1" style="left: 227.27272727273px; top: 363.63636363636px;">L</div><div id="6-10" class="cuadro bor1" style="left: 227.27272727273px; top: 409.09090909091px;">R</div><div id="6-11" class="cuadro borY" style="left: 227.27272727273px; top: 454.54545454545px;">B</div><div id="7-1" class="cuadro bor1" style="left: 272.72727272727px; top: 0px;">E</div><div id="7-2" class="cuadro bor1" style="left: 272.72727272727px; top: 45.454545454545px;">T</div><div id="7-3" class="cuadro bor1" style="left: 272.72727272727px; top: 90.909090909091px;">T</div><div id="7-4" class="cuadro bor1" style="left: 272.72727272727px; top: 136.36363636364px;">X</div><div id="7-5" class="cuadro bor1" style="left: 272.72727272727px; top: 181.81818181818px;">X</div><div id="7-6" class="cuadro bor1" style="left: 272.72727272727px; top: 227.27272727273px;">A</div><div id="7-7" class="cuadro bor1" style="left: 272.72727272727px; top: 272.72727272727px;">L</div><div id="7-8" class="cuadro bor1" style="left: 272.72727272727px; top: 318.18181818182px;">Y</div><div id="7-9" class="cuadro bor1" style="left: 272.72727272727px; top: 363.63636363636px;">T</div><div id="7-10" class="cuadro bor1" style="left: 272.72727272727px; top: 409.09090909091px;">M</div><div id="7-11" class="cuadro borY" style="left: 272.72727272727px; top: 454.54545454545px;">O</div><div id="8-1" class="cuadro bor1" style="left: 318.18181818182px; top: 0px;">P</div><div id="8-2" class="cuadro bor1" style="left: 318.18181818182px; top: 45.454545454545px;">D</div><div id="8-3" class="cuadro bor1" style="left: 318.18181818182px; top: 90.909090909091px;">N</div><div id="8-4" class="cuadro bor1" style="left: 318.18181818182px; top: 136.36363636364px;">E</div><div id="8-5" class="cuadro bor1" style="left: 318.18181818182px; top: 181.81818181818px;">O</div><div id="8-6" class="cuadro bor1" style="left: 318.18181818182px; top: 227.27272727273px;">L</div><div id="8-7" class="cuadro bor1" style="left: 318.18181818182px; top: 272.72727272727px;">D</div><div id="8-8" class="cuadro bor1" style="left: 318.18181818182px; top: 318.18181818182px;">A</div><div id="8-9" class="cuadro bor1" style="left: 318.18181818182px; top: 363.63636363636px;">R</div><div id="8-10" class="cuadro bor1" style="left: 318.18181818182px; top: 409.09090909091px;">E</div><div id="8-11" class="cuadro borY" style="left: 318.18181818182px; top: 454.54545454545px;">S</div><div id="9-1" class="cuadro bor1" style="left: 363.63636363636px; top: 0px;">S</div><div id="9-2" class="cuadro bor1" style="left: 363.63636363636px; top: 45.454545454545px;">E</div><div id="9-3" class="cuadro bor1" style="left: 363.63636363636px; top: 90.909090909091px;">T</div><div id="9-4" class="cuadro bor1" style="left: 363.63636363636px; top: 136.36363636364px;">L</div><div id="9-5" class="cuadro bor1" style="left: 363.63636363636px; top: 181.81818181818px;">O</div><div id="9-6" class="cuadro bor1" style="left: 363.63636363636px; top: 227.27272727273px;">S</div><div id="9-7" class="cuadro bor1" style="left: 363.63636363636px; top: 272.72727272727px;">I</div><div id="9-8" class="cuadro bor1" style="left: 363.63636363636px; top: 318.18181818182px;">O</div><div id="9-9" class="cuadro bor1" style="left: 363.63636363636px; top: 363.63636363636px;">E</div><div id="9-10" class="cuadro bor1" style="left: 363.63636363636px; top: 409.09090909091px;">L</div><div id="9-11" class="cuadro borY" style="left: 363.63636363636px; top: 454.54545454545px;">C</div><div id="10-1" class="cuadro bor1" style="left: 409.09090909091px; top: 0px;">S</div><div id="10-2" class="cuadro bor1" style="left: 409.09090909091px; top: 45.454545454545px;">A</div><div id="10-3" class="cuadro bor1" style="left: 409.09090909091px; top: 90.909090909091px;">A</div><div id="10-4" class="cuadro bor1" style="left: 409.09090909091px; top: 136.36363636364px;">P</div><div id="10-5" class="cuadro bor1" style="left: 409.09090909091px; top: 181.81818181818px;">U</div><div id="10-6" class="cuadro bor1" style="left: 409.09090909091px; top: 227.27272727273px;">D</div><div id="10-7" class="cuadro bor1" style="left: 409.09090909091px; top: 272.72727272727px;">E</div><div id="10-8" class="cuadro bor1" style="left: 409.09090909091px; top: 318.18181818182px;">B</div><div id="10-9" class="cuadro bor1" style="left: 409.09090909091px; top: 363.63636363636px;">R</div><div id="10-10" class="cuadro bor1" style="left: 409.09090909091px; top: 409.09090909091px;">L</div><div id="10-11" class="cuadro borY" style="left: 409.09090909091px; top: 454.54545454545px;">A</div><div id="11-1" class="cuadro borX" style="left: 454.54545454545px; top: 0px;">C</div><div id="11-2" class="cuadro borX" style="left: 454.54545454545px; top: 45.454545454545px;">I</div><div id="11-3" class="cuadro borX" style="left: 454.54545454545px; top: 90.909090909091px;">S</div><div id="11-4" class="cuadro borX" style="left: 454.54545454545px; top: 136.36363636364px;">T</div><div id="11-5" class="cuadro borX" style="left: 454.54545454545px; top: 181.81818181818px;">E</div><div id="11-6" class="cuadro borX" style="left: 454.54545454545px; top: 227.27272727273px;">L</div><div id="11-7" class="cuadro borX" style="left: 454.54545454545px; top: 272.72727272727px;">L</div><div id="11-8" class="cuadro borX" style="left: 454.54545454545px; top: 318.18181818182px;">R</div><div id="11-9" class="cuadro borX" style="left: 454.54545454545px; top: 363.63636363636px;">P</div><div id="11-10" class="cuadro borX" style="left: 454.54545454545px; top: 409.09090909091px;">A</div><div id="11-11" class="cuadro " style="left: 454.54545454545px; top: 454.54545454545px;">S</div> <!--<a href="pepe">Repetir la misma sopa aaaaaa</a>-->
+<canvas id="myCanvas" width="500" height="500" style="border:0px solid #110000; z-index:-1"></canvas>
+</div>
+<div id="sopaPalabrasSL">
+<div id="bloquePalabras">
+<h2>Paraules a buscar: </h2>
+<div id="palabras"></div>
+
+</div>
+
+<div id="correcte" class="resposta"> 
+<br>Sopa de lletres finalitzada, ¡Felicitats!<br> Lletra de la prova 2: A
+</div>
+		
+		</div>
+
+
+		
+		<script>
+
+
+
+var ESMOVIL=1;
+var mostrarBotonSolucion=0;
+var mostrarSolucionEnPalabras=0;
+var medioAncho=22.727272727273;
+var medioAlto=22.727272727273;
+var anchoTotal=500;
+var altoTotal=500;
+var GLtamX=11;
+var GLtamY=11;
+var anchoLinea=30.30303030303;
+var mostrarPalabras=1;
+// muestra el reloj en cero
+var segundosInicial = 0;
+var segundosTiempo = "00:00:00";
+var idSopaJugando="41898403";
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var inicio="";
+var actual="";
+var finali="";
+var VECmarcas=[];
+var actualX=0;
+var actualY=0;
+var palabrasResueltas=0;
+var cadenaGuiones="------------------------------";
+//var VECcolores=["rgba(200, 0, 255, 0.3)", "rgba(0, 130, 255, 0.3)", "rgba(230, 110, 5, 0.3)", "rgba(30, 210, 5, 0.3)"]
+var VECcolores=["rgba(200, 0, 255, 0.3)","rgba(0, 204, 0, 0.3)","rgba(255, 128, 0, 0.3)", "rgba(200, 200, 0, 0.3)", "rgba(0, 153, 0, 0.3)", "rgba(255, 0, 127, 0.3)", "rgba(0, 0, 204, 0.3)", "rgba(0, 153, 153, 0.3)", "rgba(76, 0, 153, 0.3)"]
+
+$(document).ready(function(){
+for (p = 0; p < palabrasSopa.length; p++) {
+if (mostrarPalabras == '1') { palaAmostrar=palabrasSopa[p];}
+if (mostrarPalabras == '2') { palaAmostrar= palabrasSopa[p].substr(0, 1)+cadenaGuiones.substr(0, palabrasSopa[p].length-1);}
+if (mostrarPalabras == '3') { palaAmostrar=cadenaGuiones.substr(0, palabrasSopa[p].length);}
+$( "#palabras" ).append( "<div id=\"PAL"+p+"\" class=\"pal1\">"+palaAmostrar+"</div>" );
+}
+
+if ( mostrarSolucionEnPalabras == 1 ) {
+$("[id^=PAL]").mouseover(function(){
+idPal=$(this).prop("id");
+idPalabra=idPal.substr(3);
+dibujaSolucion(idPalabra);
+});
+
+$("[id^=PAL]").mouseout(function(){
+dibujaSeleccion();
+});
+}
+if ( mostrarBotonSolucion == 1 ) {
+$("#verRespuesta").mouseover(function(){
+dibujaSolucion(-1);
+});
+$("#verRespuesta").mouseout(function(){
+dibujaSeleccion();
+});
+}
+/* Le pone la accion a los actores */
+/* Esto DEPENDE de si es movil o no */
+if ( ESMOVIL == 0 ) {
+$(".cuadro").mouseover(function(){
+idActor=$(this).prop("id");
+var position = $(this).position();
+//$("#data").html(idActor);
+actual=idActor;
+actualX=position.left + medioAncho;
+actualY=position.top + medioAlto;
+esValida('accPintar');
+//$("#actual").html("Actual: "+actual+" -- inicio: " + inicio + ", finali: " + finali );
+//$(this).css('background-color', 'green');
+})
+
+$(".cuadro").mousedown(function(){
+idActor=$(this).prop("id");
+var position = $(this).position();
+inicio=idActor;
+inicioX=position.left + medioAncho;
+inicioY=position.top + medioAlto;
+esValida('accPintar');
+//$("#inicio").html(idActor+" -- left: " + position.left + ", top: " + position.top+"<br /> X: " + inicioX + ", Y: " + inicioY );
+})
+$(document.documentElement).mouseup(function(){
+if ( inicio != "" && actual != "" ) {
+esValida('accValidar');
+} else {
+inicio="";
+actual="";
+finali="";
+}
+})
+} else {
+//alert('hola');
+$('#papel').bind('touchstart',function(e){
+e.preventDefault();
+var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+//CODE GOES HERE
+idActor=obtenerIdActor(touch.pageX,touch.pageY);
+//alert(idActor);
+if ( idActorRet != "0") {
+inicio=idActor;
+var position1 = $('#'+idActor).position();
+inicioX=position1.left + medioAncho;
+inicioY=position1.top + medioAlto;
+}
+//$('#data').html(touch.pageX+' '+touch.pageY);
+});
+
+$('#papel').bind('touchmove',function(e){
+e.preventDefault();
+var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+idActor=obtenerIdActor(touch.pageX,touch.pageY);
+if ( idActorRet != "0") {
+actual=idActor;
+var position1 = $('#'+idActor).position();
+actualX=position1.left + medioAncho;
+actualY=position1.top + medioAlto;
+esValida('accPintar');
+}
+//CODE GOES HERE
+//$('#data1').html(touch.pageX+' '+touch.pageY);
+});
+
+$('#papel').bind('touchend',function(e){
+e.preventDefault();
+if ( inicio != "" && actual != "" ) {
+esValida('accValidar');
+} else {
+inicio="";
+actual="";
+finali="";
+}
+//CODE GOES HERE
+//$('#data1').html(touch.pageX+' '+touch.pageY);
+});
+}
+if ( ESMOVIL == 1 ) {
+recalcularTamanoPapel();
+} else {
+// Muestro el papel
+recalcularTamanoPapelEscritorio();
+}
+// Acciones de botones
+$('.botOpciones').bind('click',function(e){
+//alert('bot');
+$('#evento').val('paso1');
+$('#formSopa').submit();
+//muestraMenu();
+})
+
+// Se descomenta para probar el menu
+//muestraMenu();
+});
+
+
+// Este es el llamado de la funcion cuando esta jugando en solitario
+// Por ahora no necesito nada de FaceBook
+function FBverficicarLogin() {
+};
+
+</script>
+<script>
+function esValida(accion) {
+fcActual=actual.split("-");
+fcInicio=inicio.split("-");
+if ( ((fcActual[0] == fcInicio[0]) || (fcActual[1] == fcInicio[1])) || (Math.abs(fcActual[0] - fcInicio[0]) == Math.abs(fcActual[1] - fcInicio[1])) ) {
+finali=actual;
+finalX=actualX;
+finalY=actualY;
+//$("#data").html(accion);
+dibujaSeleccion();
+dibujaActual();
+} else {
+// ctx.clearRect(0,0,,); // clear canvas
+// no es valida, limpia
+//$('.cuadro').css('background-color', 'yellow');
+//$('#'+inicio).css('background-color', 'red');
+}
+if ( accion == "accValidar") {
+// Verifica si es una palabra correcta
+//alert(inicio+' / '+actual+' => '+cadenaAverificar1);
+//alert('Valida:'+cadenaAverificar1+' --- '+validarPalabra.indexOf(cadenaAverificar1)+' --- '+validarPalabra[4]);
+//alert('Valida:'+cadenaAverificar2+' --- '+validarPalabra.indexOf(cadenaAverificar2)+' --- '+validarPalabra[4]);
+// OPCIONES DE VALIDACION *********************
+// OPCION 1 ******************
+// Es esta se valida que la ubicación de la palabra sea la que se definio
+// Si aparece en otro lugar la misma palabra NO la detecta
+/*
+cadenaAverificar1=inicio+"/"+finali;
+cadenaAverificar2=finali+"/"+inicio;
+buscaUno=validarPalabra.indexOf(cadenaAverificar1);
+buscaDos=validarPalabra.indexOf(cadenaAverificar2);
+*/
+// OPCION 2 ******************
+// Verifica que la palabra marcada este en el vector depalabras
+// No importa que sea o no la que colocamos
+palabraMarcada=obtenerPalabraMarcada();
+palabrasMarcadas=palabraMarcada.split("|");
+buscaUno=palabrasSopa.indexOf(palabrasMarcadas[0]);
+buscaDos=palabrasSopa.indexOf(palabrasMarcadas[1]);
+if ( buscaUno >= 0 || buscaDos >= 0 ) {
+esPalabra=1;
+// Elimino el vector de la palabra encontrada para que no la marque dos veces
+if ( buscaUno >= 0 ) {
+buscaUsado=buscaUno;
+} else {
+buscaUsado=buscaDos;
+}
+delete validarPalabra[buscaUsado];
+delete palabrasSopa[buscaUsado];
+$("#PAL"+buscaUsado).addClass("palOK");
+$("#PAL"+buscaUsado).text(palabrasSopaMostrar[buscaUsado]);
+// Sumo el contador de resueltas
+palabrasResueltas=palabrasResueltas+1;
+} else {
+esPalabra=0;
+}
+//esPalabra = Math.floor(Math.random() * (3 - 0)) + 1;
+//alert(esPalabra);
+if ( esPalabra == 1 ) {
+//alert('es Palabra');
+
+if ( inicio != "" && actual != "" ) {
+VECmarcas.push(inicioX+"-"+inicioY+"/"+finalX+"-"+finalY);
+}
+myVar = setTimeout(marcaVerde, 100);
+myVar = setTimeout(dibujaSeleccion, 150);
+myVar = setTimeout(marcaVerde, 200);
+myVar = setTimeout(dibujaSeleccion, 250);
+if ( cantidadDePalabras == palabrasResueltas ) {
+// Grabo la estadistica de que termino la sopa
+$.ajax({
+type: "POST",
+url: "sopaAjax.php",
+data: {ids:idSopaJugando}
+})
+myVar2 = setTimeout(limpiaCanvas, 600);
+myVar2 = setTimeout(dibujaSeleccion, 700);
+myVar2 = setTimeout(limpiaCanvas, 800);
+myVar2 = setTimeout(dibujaSeleccion, 900);
+myVar2 = setTimeout(limpiaCanvas, 1000);
+myVar2 = setTimeout(dibujaSeleccion, 1100);
+myVar2 = setTimeout(muestraMenuFin, 1200);
+
+}
+} else {
+//alert('no');
+myVar = setTimeout(marcaRojo, 100);
+myVar = setTimeout(dibujaSeleccion, 150);
+myVar = setTimeout(marcaRojo, 200);
+myVar = setTimeout(dibujaSeleccion, 250);
+}
+texto="";
+for (index = 0; index < VECmarcas.length; index++) {
+texto+=VECmarcas[index]+"***";
+}
+//$("#data33").html(texto);
+inicio="";
+actual="";
+finali="";
+actualX=0;
+actualY=0;
+}
+
+}
+
+function obtenerPalabraMarcada() {
+fcInicioPal=inicio.split("-");
+fcFinPal=finali.split("-");
+deltaC=fcInicioPal[0]-fcFinPal[0];
+deltaF=fcInicioPal[1]-fcFinPal[1];
+//sumaC=Math.sign(deltaC)*-1;
+//sumaF=Math.sign(deltaF)*-1;
+sumaC = (deltaC && deltaC / Math.abs(deltaC))*-1;
+sumaF = (deltaF && deltaF / Math.abs(deltaF))*-1;
+cantidad = Math.abs(deltaC) >= Math.abs(deltaF) ? Math.abs(deltaC) : Math.abs(deltaF)
+//alert(inicio+'/'+finali+'...'+deltaC+'/'+deltaF+'='+cantidad+'...Suma:'+sumaC+'/'+sumaF);
+palabra="";
+palabra2="";
+letCol=fcInicioPal[0];
+letFil=fcInicioPal[1];
+for (i = 0; i <= cantidad; i++) {
+idLetPal = "#"+letCol+'-'+letFil;
+letraPal = $(idLetPal).text();
+letCol = parseInt(letCol) + sumaC;
+letFil = parseInt(letFil) + sumaF;
+//alert("id:"+idLetPal+"...let:"+letraPal);
+palabra = palabra + letraPal;
+palabra2 = letraPal + palabra2;
+}
+//alert(palabra+'|'+palabra2);
+return palabra+'|'+palabra2;
+}
+function muestraMenu() {
+//alert("BIEN en: "+segundosTiempo);
+// Muestro el menú del final
+$('#papel').css('display', 'none');
+$('#bloquePalabras').css('display', 'none');
+$('.RScomp').css('display', 'none');
+$('#menuRes').css('display', 'inline-block');
+$(".tiempo2").text(segundosTiempo);
+$("#sopa h1").text("Jugar sopa de letras");
+}
+
+function muestraMenuFin() {
+//alert("BIEN en: "+segundosTiempo);
+// Muestro el menú del final
+$('#bloquePalabras').css('display', 'none');
+$('#menuFin').css('display', 'inline-block');
+$(".tiempo2").text(segundosTiempo);
+correcte();
+}
+
+
+function marcaVerde() {
+remarcaLinea("rgba(0,0,255,1)");
+}
+function marcaRojo() {
+remarcaLinea("rgba(255,0,0,1)");
+}
+function marcaBlanca() {
+remarcaLinea("rgba(255,255,255,1)");
+}
+
+
+function remarcaLinea(color) {
+
+for (i = 0; i < 5; i++) {
+ctx.beginPath();
+ctx.moveTo(inicioX,inicioY);
+ctx.lineTo(finalX,finalY);
+ctx.strokeStyle=color;
+ctx.lineWidth=anchoLinea;
+ctx.lineCap="square";
+ctx.stroke();
+ctx.closePath();
+}
+}
+
+function dibujaActual() {
+ctx.beginPath();
+ctx.moveTo(inicioX,inicioY);
+ctx.lineTo(finalX,finalY);
+ctx.strokeStyle="rgba(255,150,0,0.7)";
+ctx.lineWidth=anchoLinea;
+ctx.lineCap="square";
+ctx.stroke();
+ctx.closePath();
+}
+
+function dibujaSeleccion() {
+
+ctx.clearRect(0,0,anchoTotal,altoTotal); // clear canvas
+/*
+ctx.beginPath();
+ctx.fillStyle = "rgba(255, 0, 0, 0.5)";
+ctx.arc(inicioX, inicioY, 10, 0, Math.PI * 2, true);
+ctx.fill();
+ctx.closePath();
+*/
+for (index = 0; index < VECmarcas.length; index++) {
+fcM=VECmarcas[index].split("/");
+fcMini=fcM[0].split("-");
+fcMfin=fcM[1].split("-");
+iniX=fcMini[0];
+iniY=fcMini[1];
+finX=fcMfin[0];
+finY=fcMfin[1];
+indiceColor= index % VECcolores.length;
+ctx.beginPath();
+ctx.moveTo(iniX,iniY);
+ctx.lineTo(finX,finY);
+ctx.strokeStyle=VECcolores[indiceColor];
+ctx.lineWidth=anchoLinea;
+ctx.lineCap="square";
+ctx.stroke();
+ctx.closePath();
+}
+}
+
+function limpiaCanvas() {
+ctx.clearRect(0,0,anchoTotal,altoTotal); // clear canvas
+}
+
+
+function obtenerIdActor(x,y) {
+//var posPapel = $("#papel").position();
+var posPapel = $("#papel").offset();
+papelX=posPapel.left;
+papelY=posPapel.top;
+//alert(papelX+'-'+papelY+'.....'+x+'-'+y);
+//alert(papelX+'-'+papelY+')/');
+actorX=Math.floor((x-papelX)/anchoCuadro)+1;
+actorY=Math.floor((y-papelY)/altoCuadro)+1;
+idActorRet=actorX+'-'+actorY;
+//alert(idActorRet);
+if ( (actorX < 1 || actorX > GLtamX) || (actorY < 1 || actorY > GLtamY) ) {
+idActorRet="0";
+//alert(idActorRet);
+}
+return idActorRet;
+}
+
+
+</script>
+<script>
+function dibujaSolucion(idPalabra) {
+
+if ( idPalabra == -1 ) {
+primerPalabra = 0;
+ultimaPalabra = validarPalabra.length;
+} else {
+primerPalabra = idPalabra;
+ultimaPalabra = Number(idPalabra)+1;
+}
+
+for (index = primerPalabra; index < ultimaPalabra; index++) {
+
+if (typeof validarPalabra[index] != 'undefined') {
+
+posDibuja=validarPalabra[index].split("/");
+posDibujaUno=posDibuja[0].split("-");
+posDibujaDos=posDibuja[1].split("-");
+posDibujaUnoX=posDibujaUno[0];
+posDibujaUnoY=posDibujaUno[1];
+posDibujaDosX=posDibujaDos[0];
+posDibujaDosY=posDibujaDos[1];
+
+var position1 = $('#'+posDibujaUnoX+'-'+posDibujaUnoY).position();
+inicioX=position1.left + medioAncho;
+inicioY=position1.top + medioAlto;
+
+var position2 = $('#'+posDibujaDosX+'-'+posDibujaDosY).position();
+finX=position2.left + medioAncho;
+finY=position2.top + medioAlto;
+//ctx.clearRect(0,0,,); // clear canvas
+ctx.beginPath();
+ctx.moveTo(inicioX,inicioY);
+ctx.lineTo(finX,finY);
+ctx.strokeStyle="rgba(100,100,100,0.3)";
+ctx.lineWidth=anchoLinea;
+ctx.lineCap="square";
+ctx.stroke();
+ctx.closePath();
+//alert(index);
+}
+//alert(validarPalabra[idPalabra]+'---'+posDibujaUnoX+','+posDibujaUnoY+'/'+posDibujaDosX+','+posDibujaDosY+'->'+inicioX+' y '+inicioY+'->'+finX+' y '+finY);
+}
+}
+function recalcularTamanoPapelEscritorio() {
+$('#papel').css('width',anchoTotal+'px');
+$('#papel').css('height',altoTotal+'px');
+anchoCuadro=anchoTotal/GLtamX;
+tamanoLetra=anchoCuadro/2;
+$('.cuadro').css('height', anchoCuadro+'px');
+$('.cuadro').css('width', anchoCuadro+'px');
+$('.cuadro').css('line-height', anchoCuadro+'px');
+$('.cuadro').css('font-size', tamanoLetra+'px');
+$( '.cuadro' ).each(function() {
+idMover=this.id.split("-");
+xMover=idMover[0];
+yMover=idMover[1];
+//alert(xMover+','+yMover);
+posXmover=(xMover-1)*anchoCuadro;
+posYmover=(yMover-1)*anchoCuadro;
+$( this ).css('top', posYmover+'px');
+$( this ).css('left', posXmover+'px');
+});
+altoCuadro=anchoCuadro;
+medioAncho=altoCuadro/2;
+medioAlto=medioAncho;
+anchoLinea=((anchoCuadro+altoCuadro)/2)/1.5;
+$('#papel').css('display', 'inline-block');
+}
+function recalcularTamanoPapel() {
+// Recalculo el tamaño
+//$('#papel').css('width', '98%');
+//ancho=$("#papel").width();
+//anchoPan=$(window).width();
+//altoPan=$(window).height();
+anchoPan=screen.width;
+altoPan=screen.height;
+ancho = anchoPan < altoPan ? anchoPan - ( anchoPan * .07 ) : altoPan;
+
+//alert('reca='+ancho+'...'+anchoPan+'/'+altoPan+'...'+w+'/'+h+'...'+w2+'/'+h2);
+$('#papel').css('width', ancho+'px');
+$('#papel').css('height', ancho+'px');
+anchoMen=ancho+10;
+$('#menuRes').css('width', anchoMen+'px');
+//$('#menuRes').css('height', anchoMen+'px');
+$('#menuFin').css('width', anchoMen+'px');
+ctx.canvas.width = ancho;
+ctx.canvas.height = ancho;
+//$('#myCanvas').width(ancho);
+//$('#myCanvas').height(ancho);
+anchoCuadro=ancho/GLtamX;
+tamanoLetra=anchoCuadro/2;
+$('.cuadro').css('height', anchoCuadro+'px');
+$('.cuadro').css('width', anchoCuadro+'px');
+$('.cuadro').css('line-height', anchoCuadro+'px');
+$('.cuadro').css('font-size', tamanoLetra+'px');
+$( '.cuadro' ).each(function() {
+idMover=this.id.split("-");
+xMover=idMover[0];
+yMover=idMover[1];
+//alert(xMover+','+yMover);
+posXmover=(xMover-1)*anchoCuadro;
+posYmover=(yMover-1)*anchoCuadro;
+$( this ).css('top', posYmover+'px');
+$( this ).css('left', posXmover+'px');
+});
+altoCuadro=anchoCuadro;
+medioAncho=altoCuadro/2;
+medioAlto=medioAncho;
+anchoTotal=ancho;
+altoTotal=ancho;
+anchoLinea=((anchoCuadro+altoCuadro)/2)/1.5;
+$('#papel').css('display', 'inline-block');
+}
+</script>
+		
+	</body>
+
+</html>

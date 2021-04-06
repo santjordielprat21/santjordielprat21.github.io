@@ -1,0 +1,150 @@
+<html>
+	<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	 
+	<title> Sant Jordi 2021 </title>
+	<script type="text/javascript">
+		function error()
+		{
+			var v = document.getElementById("error");
+			v.style.display = "block";
+			var v = document.getElementById("correcte");
+			v.style.display = "none";
+		}
+		
+		function correcte()
+		{
+			var v = document.getElementById("correcte");
+			v.style.display = "block";
+			var v = document.getElementById("error");
+			v.style.display = "none";
+		}
+	</script>
+	
+	<style type="text/css">
+		@viewport {
+		  width: device-width ;
+		  zoom: 1.0 ;
+		} 
+		
+		@-ms-viewport {
+		  width: device-width ;
+		} 
+		
+		div.full
+		{
+			width: 95%;
+			padding: 10px;
+			text-align: center;		
+			margin: auto;
+		}
+		
+		div.poema
+		{
+			background-image: url(poema.jpg);
+			background-size: 100% 100%;
+			background-size: 100% 100%;
+			padding: 30px 10px 40px 10px;
+			font-size: 18px;
+			font-style: italic;
+		}
+		
+		input.button{
+			font-family:'Garamond';
+			font-size:3vw;
+			width:50%;
+			margin-bottom: 2vw;
+		}
+		
+		div.pregunta{
+			font-family:'Garamond';
+			font-size:5vw;
+			padding: 20px 5px 20px 5px;
+		}
+		
+		div.resposta{
+			font-family:'Garamond';
+			font-size:5vw;
+			color:darkgreen;
+			font-weight:bold;
+			display: none;
+		}
+		
+		div.respostaerror{
+			font-family:'Garamond';
+			font-size:5vw;
+			color:darkred;
+			font-weight:bold;
+			display: none;
+		}
+		
+		.responsive {
+			width: 100%;
+			height: auto;
+		}
+		
+		
+		</style>
+	
+	</head>
+	
+	
+	<body>
+		<div  class="full">
+			<!-- millor amb imatge que potser no es veu bé el tipus de lletra -->
+			<div><img src="sant-jordi-capcalera.jpg" alt="Sant Jordi" class="responsive"></div>
+			
+			<div class="poema">
+				<p> Trae, Jarifa, trae tu mano, <br>
+					ven y pósala en mi frente, <br>
+					que en un mar de lava hirviente <br>
+					mi cabeza siento arder. <br>
+					Ven y junta con mis labios <br>
+					esos labios que me irritan, <br>
+					donde aún los besos palpitan <br>
+					de tus amantes de ayer. <br>
+				</p>
+			</div>
+			
+			<!-- formulari -->
+			<div  class="pregunta">¿Cuántas sílabas tiene esta estrofa de Espronceda?</div>
+			
+			<div>
+				<input type="button" onclick="error();" name="submit" value="70" class="button">
+			</div>
+			<div>
+				<input type="button" onclick="error();" name="submit" value="71" class="button">
+				
+			</div>
+			<div>
+				<input type="button" onclick="correcte();" name="submit" value="72" class="button">
+			</div>
+			<div>
+				<input type="button" onclick="error();" name="submit" value="73" class="button">
+			</div>
+			<br>
+			<div id="correcte" class="resposta"> Correcte!! <br> Lletra de la prova 1: S <br>
+			<p>
+			tra-e-ja-ri-fa-tra-e-tu-ma-no (10 sílabas) <br>
+			ven-y-pó-sa-la-en-mi-fren-te (9 sílabas) <br>
+			que-en-un-mar-de-la-va-hir-vien-te (10 sílabas) <br>
+			mi-ca-be-za-sien-to-ar-der (8 sílabas) <br>
+			ven-y-jun-ta-con-mis-la-bios (8 sílabas) <br>
+			e-sos-la-bios-que-me-i-rri-tan (9 sílabas) <br>
+			don-de-a-ún-los-be-sos-pal-pi-tan (10 sílabas) <br>
+			de-tus-a-man-tes-de-a-yer (8 sílabas) <br>
+			</p>
+			</div>
+			<div id="error" class="respostaerror"> Torna-ho a provar! </div>
+		</div>
+
+
+		
+		
+		
+	</body>
+
+</html>
