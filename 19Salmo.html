@@ -1,0 +1,226 @@
+<html>
+	<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	 
+	<title> Sant Jordi 2021 </title>
+	<script type="text/javascript">
+		function error()
+		{
+			var v = document.getElementById("error");
+			v.style.display = "block";
+			var v = document.getElementById("correcte");
+			v.style.display = "none";
+		}
+		
+		function correcte()
+		{
+			var v = document.getElementById("correcte");
+			v.style.display = "block";
+			var v = document.getElementById("error");
+			v.style.display = "none";
+		}
+		
+		function validar()
+		{
+			var form_elements = document.getElementById('form').elements;
+			var conte1 = form_elements['completa1'].value;
+			var conte2 = form_elements['completa2'].value;
+			var conte3 = form_elements['completa3'].value;
+			var conte4 = form_elements['completa4'].value;
+			var conte5 = form_elements['completa5'].value;
+			var conte6 = form_elements['completa6'].value;
+			if(conte1=='op2' && 
+				conte2=='op3' && 
+				conte3=='op1' && 
+				conte4=='op4' && 
+				conte5=='op4' && 
+				conte6=='op3') correcte();
+			else error();			
+		}
+	</script>
+	
+	<style type="text/css">
+		@viewport {
+		  width: device-width ;
+		  zoom: 1.0 ;
+		} 
+		
+		@-ms-viewport {
+		  width: device-width ;
+		} 
+		
+		div.full
+		{
+			width: 95%;
+			padding: 10px;
+			//border: 2px solid #000;
+			border-radius: 15px;
+			-moz-border-radius: 15px;
+			text-align: center;
+			//background-color: #DDDDDD;
+			margin: auto;
+		}
+		
+		input.button{
+			width:50%;
+			margin-bottom: 2vw;
+		}
+		
+		input.titolconte {
+			
+		}
+		
+		div.pregunta{
+			font-family:'Garamond';
+			font-size: 25px;
+			padding: 20px 5px 20px 5px;
+		}
+		
+		div.resposta{
+			font-family:'Garamond';
+			font-size:5vw;
+			color:darkgreen;
+			font-weight:bold;
+			display: none;
+		}
+		
+		div.respostaerror{
+			font-family:'Garamond';
+			font-size:5vw;
+			color:darkred;
+			font-weight:bold;
+			display: none;
+		}
+		
+		.responsive {
+			width: 80%;
+			height: auto;
+			padding-bottom: 5px;
+		}
+		
+		div.conte {
+			padding: 0px 0px 25px 0px;
+		}
+		
+		
+		</style>
+	
+	</head>
+	
+	
+	<body>
+		<div  class="full">
+			<!-- millor amb imatge que potser no es veu bé el tipus de lletra -->
+			<div><img src="sant-jordi-capcalera.jpg" alt="Sant Jordi" class="responsive"></div>
+						
+			<!-- formulari -->
+			<div  class="pregunta">Completa los títulos</div>
+			<form id="form">			
+			<div class="conte">				
+				<img src="completa1.jpeg" class="responsive"><br>
+				<input type="radio" id="op1-1" name="completa1" value="op1">
+				<label for="op1">La alegría</label><br>
+				<input type="radio" id="op1-2" name="completa1" value="op2">
+				<label for="op2">La fantasía</label><br>
+				<input type="radio" id="op1-3" name="completa1" value="op3">
+				<label for="op3">La diversión</label><br>
+				<input type="radio" id="op1-4" name="completa1" value="op4">
+				<label for="op4">La libertad</label>
+				<br><br>
+			</div>
+
+			<div class="conte">				
+				<img src="completa2.jpeg" class="responsive"><br>
+				<input type="radio" id="op2-1" name="completa2" value="op1">
+				<label for="op1">Fred</label><br>
+				<input type="radio" id="op2-2" name="completa2" value="op2">
+				<label for="op2">Antonio</label><br>
+				<input type="radio" id="op2-3" name="completa2" value="op3">
+				<label for="op3">Greg</label><br>
+				<input type="radio" id="op2-4" name="completa2" value="op4">
+				<label for="op4">Luis</label>
+				<br><br>
+			</div>
+
+			<div class="conte">				
+				<img src="completa3.jpeg" class="responsive"><br>
+				<input type="radio" id="op3-1" name="completa3" value="op1">
+				<label for="op1">Futbolísimos</label><br>
+				<input type="radio" id="op3-2" name="completa3" value="op2">
+				<label for="op2">Amigos</label><br>
+				<input type="radio" id="op3-3" name="completa3" value="op3">
+				<label for="op3">Jugadores</label><br>
+				<input type="radio" id="op3-4" name="completa3" value="op4">
+				<label for="op4">Estudiantes</label>
+				<br><br>
+			</div>
+
+			<div class="conte">				
+				<img src="completa4.jpeg" class="responsive"><br>
+				<input type="radio" id="op4-1" name="completa4" value="op1">
+				<label for="op1">Los 5</label><br>
+				<input type="radio" id="op4-2" name="completa4" value="op2">
+				<label for="op2">Del Prat</label><br>
+				<input type="radio" id="op4-3" name="completa4" value="op3">
+				<label for="op3">Los Brady</label><br>
+				<input type="radio" id="op4-4" name="completa4" value="op4">
+				<label for="op4">Camelot</label>
+				<br><br>
+			</div>
+
+			<div class="conte">				
+				<img src="completa5.jpeg" class="responsive"><br>
+				<input type="radio" id="op5-1" name="completa5" value="op1">
+				<label for="op1">Braguitas</label><br>
+				<input type="radio" id="op5-2" name="completa5" value="op2">
+				<label for="op2">Luciérnaga</label><br>
+				<input type="radio" id="op5-3" name="completa5" value="op3">
+				<label for="op3">Risitas</label><br>
+				<input type="radio" id="op5-4" name="completa5" value="op4">
+				<label for="op4">Calzoncillos</label>
+				<br><br>
+			</div>
+
+			<div class="conte">				
+				<img src="completa6.jpeg" class="responsive"><br>
+				<input type="radio" id="op6-1" name="completa6" value="op1">
+				<label for="op1">Vampirina</label><br>
+				<input type="radio" id="op6-2" name="completa6" value="op2">
+				<label for="op2">El ratoncito Pérez</label><br>
+				<input type="radio" id="op6-3" name="completa6" value="op3">
+				<label for="op3">Isadora Moon</label><br>
+				<input type="radio" id="op6-4" name="completa6" value="op4">
+				<label for="op4">Elsa</label>
+				<br><br>
+			</div>
+			
+			
+			<div>
+				<input type="button" onclick="validar();" name="submit" value="Comprovar" class="button">
+			</div>
+			</form>
+			<br>
+			<div id="correcte" class="resposta"> Correcte!! <br> 
+				La 19a lletra és la r: <br>
+				&lowbar;&nbsp;&lowbar;&nbsp;&nbsp;
+				&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&nbsp;
+				&lowbar;&nbsp;&lowbar;&nbsp;&nbsp;
+				&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&nbsp;
+				&lowbar;&nbsp;&lowbar;&nbsp;r&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&nbsp;
+				&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&nbsp;
+				&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&nbsp;</div>
+			<div id="error" class="respostaerror"> Torna-ho a provar! </div>
+			
+			<div><img src="logos.PNG" alt="Col.laboradors" class="responsive"></div>
+		</div>
+
+
+		
+		
+		
+	</body>
+
+</html>

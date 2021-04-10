@@ -22,18 +22,6 @@
 			var v = document.getElementById("error");
 			v.style.display = "none";
 		}
-		
-		function validar()
-		{
-			var conte1 = document.getElementById("conte1").value.toLowerCase();
-			var conte2 = document.getElementById("conte2").value.toLowerCase();
-			var conte3 = document.getElementById("conte3").value.toLowerCase();
-			if((conte1=='el flautista d\'hamelín' || conte1=='el flautista d\'hamelin') &&
-			(conte2=='la blancaneu i els set nans' || conte2=='la blancaneu')
-			 &&
-			conte3=='l\'aneguet lleig') correcte();
-			else error();			
-		}
 	</script>
 	
 	<style type="text/css">
@@ -50,26 +38,30 @@
 		{
 			width: 95%;
 			padding: 10px;
-			//border: 2px solid #000;
-			border-radius: 15px;
-			-moz-border-radius: 15px;
-			text-align: center;
-			//background-color: #DDDDDD;
+			text-align: center;		
 			margin: auto;
 		}
 		
+		div.poema
+		{
+			background-image: url(poema.jpg);
+			background-size: 100% 100%;
+			background-size: 100% 100%;
+			padding: 30px 10px 40px 10px;
+			font-size: 18px;
+			font-style: italic;
+		}
+		
 		input.button{
+			font-family:'Garamond';
+			font-size:3vw;
 			width:50%;
 			margin-bottom: 2vw;
 		}
 		
-		input.titolconte {
-			
-		}
-		
 		div.pregunta{
 			font-family:'Garamond';
-			font-size: 25px;
+			font-size:5vw;
 			padding: 20px 5px 20px 5px;
 		}
 		
@@ -90,13 +82,8 @@
 		}
 		
 		.responsive {
-			width: 80%;
+			width: 100%;
 			height: auto;
-			padding-bottom: 5px;
-		}
-		
-		div.conte {
-			padding: 0px 0px 25px 0px;
 		}
 		
 		
@@ -109,27 +96,34 @@
 		<div  class="full">
 			<!-- millor amb imatge que potser no es veu bé el tipus de lletra -->
 			<div><img src="sant-jordi-capcalera.jpg" alt="Sant Jordi" class="responsive"></div>
-						
+			
+			<div class="poema">
+				<p> Trae, Jarifa, trae tu mano, <br>
+					ven y pósala en mi frente, <br>
+					que en un mar de lava hirviente <br>
+					mi cabeza siento arder. <br>
+					Ven y junta con mis labios <br>
+					esos labios que me irritan, <br>
+					donde aún los besos palpitan <br>
+					de tus amantes de ayer. <br>
+				</p>
+			</div>
+			
 			<!-- formulari -->
-			<div  class="pregunta">Endevina el títol d’aquests contes clàssics:</div>
-						
-			<div class="conte">				
-				&#127932;&#128000; &#128000; &#128000; &#128000;  <br>
-				<br>Títol del conte: <input type="text" id="conte1" class="titolconte">
-			</div>
-			
-			<div class="conte">
-				🧙🏻‍♀️🍎  <br>
-				<br>Títol del conte: <input type="text" id="conte2" class="titolconte">
-			</div>
-			
-			<div class="conte">
-				🐤🐤🐤🐧 <br>
-				<br>Títol del conte: <input type="text" id="conte3" class="titolconte">
-			</div>
+			<div  class="pregunta">¿Cuántas sílabas tiene esta estrofa de Espronceda?</div>
 			
 			<div>
-				<input type="button" onclick="validar();" name="submit" value="Comprovar" class="button">
+				<input type="button" onclick="error();" name="submit" value="70" class="button">
+			</div>
+			<div>
+				<input type="button" onclick="error();" name="submit" value="71" class="button">
+				
+			</div>
+			<div>
+				<input type="button" onclick="correcte();" name="submit" value="72" class="button">
+			</div>
+			<div>
+				<input type="button" onclick="error();" name="submit" value="73" class="button">
 			</div>
 			<br>
 			<div id="correcte" class="resposta"> Correcte!! <br> 
@@ -142,6 +136,16 @@
 				&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&nbsp;
 				&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&nbsp;
 			<br>
+			<p>
+			tra-e-ja-ri-fa-tra-e-tu-ma-no (10 sílabas) <br>
+			ven-y-pó-sa-la-en-mi-fren-te (9 sílabas) <br>
+			que-en-un-mar-de-la-va-hir-vien-te (10 sílabas) <br>
+			mi-ca-be-za-sien-to-ar-der (8 sílabas) <br>
+			ven-y-jun-ta-con-mis-la-bios (8 sílabas) <br>
+			e-sos-la-bios-que-me-i-rri-tan (9 sílabas) <br>
+			don-de-a-ún-los-be-sos-pal-pi-tan (10 sílabas) <br>
+			de-tus-a-man-tes-de-a-yer (8 sílabas) <br>
+			</p>
 			</div>
 			<div id="error" class="respostaerror"> Torna-ho a provar! </div>
 			
