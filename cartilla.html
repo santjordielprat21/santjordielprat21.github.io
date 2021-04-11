@@ -11,28 +11,30 @@
 	
 		function carnet()
 		{
-			const $elementoParaConvertir = document.body; // <-- Aquí puedes elegir cualquier elemento del DOM
-        html2pdf()
-            .set({
-                margin: 1,
-                filename: 'documento.pdf',
-                image: {
-                    type: 'jpeg',
-                    quality: 0.98
-                },
-                html2canvas: {
-                    scale: 3, // A mayor escala, mejores gráficos, pero más peso
-                    letterRendering: true,
-                },
-                jsPDF: {
-                    unit: "in",
-                    format: "a3",
-                    orientation: 'portrait' // landscape o portrait
-                }
-            })
-            .from($elementoParaConvertir)
-            .save()
-            .catch(err => console.log(err));
+			var nom = document.getElementById("nom").value;
+			document.getElementById("carnet").innerHTML=nom;
+			const $elementoParaConvertir = document.getElementById("carnet"); // <-- Aquí puedes elegir cualquier elemento del DOM
+			html2pdf()
+				.set({
+					margin: 1,
+					filename: 'carnet.pdf',
+					image: {
+						type: 'jpeg',
+						quality: 0.98
+					},
+					html2canvas: {
+						scale: 3, // A mayor escala, mejores gráficos, pero más peso
+						letterRendering: true,
+					},
+					jsPDF: {
+						unit: "in",
+						format: "a4",
+						orientation: 'portrait' // landscape o portrait
+					}
+				})
+				.from($elementoParaConvertir)
+				.save()
+				.catch(err => console.log(err));
 			
 		}
 		
@@ -121,6 +123,16 @@
 			height: auto;
 		}
 		
+		div.carnet {
+			background-image: url(carnet.jfif);
+			background-size: 100% 100%;
+			padding: 130px 10px 40px 10px;
+			font-size: 30px;
+			font-style: italic;		
+			font-weight:bold;
+			color:black;
+			display: none;
+		}
 		
 		</style>
 	
@@ -148,13 +160,16 @@
 			</div>
 			<br>
 			<div>
-				<input type="button" onclick="carnet();" name="submit" value="Comprovar" class="button">
+				<input type="button" onclick="validar();" name="submit" value="Comprovar" class="button">
 			</div>
 			
-			<div id="correcte" class="resposta"> Felicitats! Ja pots demanar el teu carnet d'ajudant i ajudanta de dracs a xxxxxxxxxx@xxxxxxx.com 
-			<div id="carnet">
-				<img src="carnet.jfif" alt="Sant Jordi" class="responsive">
-			</div>
+			<div id="correcte" class="resposta"> Felicitats! Ja pots demanar el teu carnet d'ajudant i ajudanta de dracs
+				<br><br>Nom: <input type="text" id="nom">
+				<br><input type="button" onclick="carnet();" name="submit" value="Descarregar carnet" class="button" style="width:80%">
+
+				<div id="carnet" class="carnet" style="height:50px">
+					
+				</div>
 			</div>
 			<div id="error" class="respostaerror"> Torna-ho a provar! </div>
 						
