@@ -4,10 +4,38 @@
 	<meta content="utf-8" http-equiv="encoding">	
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	 
+	<script src="html2pdf.bundle.min.js"></script> 
 	<title> Sant Jordi 2021 </title>
 
 	<script type="text/javascript">
+	
+		function carnet()
+		{
+			const $elementoParaConvertir = document.body; // <-- Aquí puedes elegir cualquier elemento del DOM
+        html2pdf()
+            .set({
+                margin: 1,
+                filename: 'documento.pdf',
+                image: {
+                    type: 'jpeg',
+                    quality: 0.98
+                },
+                html2canvas: {
+                    scale: 3, // A mayor escala, mejores gráficos, pero más peso
+                    letterRendering: true,
+                },
+                jsPDF: {
+                    unit: "in",
+                    format: "a3",
+                    orientation: 'portrait' // landscape o portrait
+                }
+            })
+            .from($elementoParaConvertir)
+            .save()
+            .catch(err => console.log(err));
+			
+		}
+		
 		function error()
 		{
 			var v = document.getElementById("error");
@@ -21,7 +49,7 @@
 			var v = document.getElementById("correcte");
 			v.style.display = "block";
 			var v = document.getElementById("error");
-			v.style.display = "none";
+			v.style.display = "none";			
 		}
 		
 		function validar()
@@ -120,12 +148,16 @@
 			</div>
 			<br>
 			<div>
-				<input type="button" onclick="validar();" name="submit" value="Comprovar" class="button">
+				<input type="button" onclick="carnet();" name="submit" value="Comprovar" class="button">
 			</div>
 			
-			<div id="correcte" class="resposta"> Felicitats! Ja pots demanar el teu carnet d'ajudant i ajudanta de dracs a xxxxxxxxxx@xxxxxxx.com </div>
+			<div id="correcte" class="resposta"> Felicitats! Ja pots demanar el teu carnet d'ajudant i ajudanta de dracs a xxxxxxxxxx@xxxxxxx.com 
+			<div id="carnet">
+				<img src="carnet.jfif" alt="Sant Jordi" class="responsive">
+			</div>
+			</div>
 			<div id="error" class="respostaerror"> Torna-ho a provar! </div>
-			
+						
 			<div><img src="logos.PNG" alt="Col.laboradors" class="responsive"></div>
 		</div>
 
