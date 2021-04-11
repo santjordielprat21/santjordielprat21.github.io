@@ -13,6 +13,7 @@
 		{
 			var nom = document.getElementById("nom").value;
 			document.getElementById("carnet").innerHTML=nom;
+			document.getElementById("carnet").style.display = "block";
 			const $elementoParaConvertir = document.getElementById("carnet"); // <-- Aquí puedes elegir cualquier elemento del DOM
 			html2pdf()
 				.set({
