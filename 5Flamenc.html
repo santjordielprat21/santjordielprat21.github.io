@@ -23,7 +23,7 @@
 			v.style.display = "none";
 		}
 		
-		function validar()
+		/*function validar()
 		{
 			var conte1 = document.getElementById("conte1").value.toLowerCase();
 			var conte2 = document.getElementById("conte2").value.toLowerCase();
@@ -32,6 +32,18 @@
 			conte2=='harry potter i la pedra filosofal'
 			 &&
 			conte3=='les princeses també es tiren pets') correcte();
+			else error();			
+		}*/
+		
+		function validar()
+		{
+			var form_elements = document.getElementById('form').elements;
+			var conte1 = form_elements['completa1'].value;
+			var conte2 = form_elements['completa2'].value;
+			var conte3 = form_elements['completa3'].value;
+			if(conte1=='op1' && 
+				conte2=='op4' && 
+				conte3=='op2') correcte();
 			else error();			
 		}
 	</script>
@@ -108,29 +120,54 @@
 	<body>
 		<div  class="full">
 			<!-- millor amb imatge que potser no es veu bé el tipus de lletra -->
-			<div><img src="sant-jordi-capcalera.jpg" alt="Sant Jordi" class="responsive"></div>
+			<div><img src="https://pratijordi.github.io/sant-jordi-capcalera.jpg" alt="Sant Jordi" class="responsive"></div>
 						
 			<!-- formulari -->
 			<div  class="pregunta">Em conec tots els contes!!!</div>
-						
+			<form id="form">	
 			<div class="conte">				
-				<img src="monstrecolors.jpg" class="responsive">
-				<br>Títol del llibre: <input type="text" id="conte1" class="titolconte">
+				<img src="https://pratijordi.github.io/monstrecolors.jpg" class="responsive">
+				<br>Títol del llibre: <br>
+				<input type="radio" id="op1-1" name="completa1" value="op1">
+				<label for="op1">El monstre de colors</label><br>
+				<input type="radio" id="op1-2" name="completa1" value="op2">
+				<label for="op2">La oruga goluda</label><br>
+				<input type="radio" id="op1-3" name="completa1" value="op3">
+				<label for="op3">Monstres S.A. </label><br>
+				<input type="radio" id="op1-4" name="completa1" value="op4">
+				<label for="op4">Allà on viuen els monstres</label>
 			</div>
 			
 			<div class="conte">				
-				<img src="harrypotter.jpeg" class="responsive">
-				<br>Títol del llibre: <input type="text" id="conte2" class="titolconte">
+				<img src="https://pratijordi.github.io/harrypotter.jpeg" class="responsive">
+				<br>Títol del llibre: <br>
+				<input type="radio" id="op2-1" name="completa2" value="op1">
+				<label for="op1">Kika superbruixa </label><br>
+				<input type="radio" id="op2-2" name="completa2" value="op2">
+				<label for="op2">La màgia del bosc </label><br>
+				<input type="radio" id="op2-3" name="completa2" value="op3">
+				<label for="op3">El millor mag  </label><br>
+				<input type="radio" id="op2-4" name="completa2" value="op4">
+				<label for="op4">Harry Potter i la pedra filosofal</label>
 			</div>
 			
 			<div class="conte">				
-				<img src="princeses.jpeg" class="responsive">
-				<br>Títol del llibre: <input type="text" id="conte3" class="titolconte">
+				<img src="https://pratijordi.github.io/princeses.jpeg" class="responsive">
+				<br>Títol del llibre: <br>
+				<input type="radio" id="op2-1" name="completa3" value="op1">
+				<label for="op1">Tinc un Drac a casa </label><br>
+				<input type="radio" id="op2-2" name="completa3" value="op2">
+				<label for="op2">Les princeses també es tiren pets </label><br>
+				<input type="radio" id="op2-3" name="completa3" value="op3">
+				<label for="op3">Rapunzel </label><br>
+				<input type="radio" id="op2-4" name="completa3" value="op4">
+				<label for="op4">Blancaneus</label>
 			</div>
 			
 			<div>
 				<input type="button" onclick="validar();" name="submit" value="Comprovar" class="button">
 			</div>
+			</form>
 			<br>
 			<div id="correcte" class="resposta"> Correcte!! <br> 
 				La 5a lletra és la e: <br>
@@ -143,7 +180,7 @@
 				&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&lowbar;&nbsp;&nbsp;</div>
 			<div id="error" class="respostaerror"> Torna-ho a provar! </div>
 			
-			<div><img src="logos.PNG" alt="Col.laboradors" class="responsive"></div>
+			<div><img src="https://pratijordi.github.io/logos.PNG" alt="Col.laboradors" class="responsive"></div>
 		</div>
 
 
