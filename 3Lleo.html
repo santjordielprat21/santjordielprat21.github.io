@@ -25,13 +25,13 @@
 		
 		function validar()
 		{
-			var conte1 = document.getElementById("conte1").value.toLowerCase();
-			var conte2 = document.getElementById("conte2").value.toLowerCase();
-			var conte3 = document.getElementById("conte3").value.toLowerCase();
-			if((conte1=='el flautista d\'hamelín' || conte1=='el flautista d\'hamelin') &&
-			(conte2=='la blancaneu i els set nans' || conte2=='la blancaneu')
-			 &&
-			conte3=='l\'aneguet lleig') correcte();
+			var form_elements = document.getElementById('form').elements;
+			var conte1 = form_elements['completa1'].value;
+			var conte2 = form_elements['completa2'].value;
+			var conte3 = form_elements['completa3'].value;
+			if(conte1=='op2' && 
+				conte2=='op2' && 
+				conte3=='op3') correcte();
 			else error();			
 		}
 	</script>
@@ -112,22 +112,46 @@
 						
 			<!-- formulari -->
 			<div  class="pregunta">Endevina el títol d’aquests contes clàssics:</div>
-						
+			<form id="form">			
 			<div class="conte">				
 				&#127932;&#128000; &#128000; &#128000; &#128000;  <br>
-				<br>Títol del conte: <input type="text" id="conte1" class="titolconte">
+				<br>Títol del conte: <br>
+				<input type="radio" id="op1-1" name="completa1" value="op1">
+				<label for="op1">La rateta que escombrava l’escaleta</label><br>
+				<input type="radio" id="op1-2" name="completa1" value="op2">
+				<label for="op2">El flautista de Hamelin</label><br>
+				<input type="radio" id="op1-3" name="completa1" value="op3">
+				<label for="op3">El lleó i el ratolí </label><br>
+				<input type="radio" id="op1-4" name="completa1" value="op4">
+				<label for="op4">Ratolina Tomasa i Tom ratolí</label>
 			</div>
 			
 			<div class="conte">
 				🧙🏻‍♀️🍎  <br>
-				<br>Títol del conte: <input type="text" id="conte2" class="titolconte">
+				<br>Títol del conte: <br>
+				<input type="radio" id="op2-1" name="completa2" value="op1">
+				<label for="op1">Rapunzel </label><br>
+				<input type="radio" id="op2-2" name="completa2" value="op2">
+				<label for="op2">Blancaneus i els set nans </label><br>
+				<input type="radio" id="op2-3" name="completa2" value="op3">
+				<label for="op3">La Ventafocs </label><br>
+				<input type="radio" id="op2-4" name="completa2" value="op4">
+				<label for="op4">La cuina de la bruixa</label>
 			</div>
 			
 			<div class="conte">
 				🐤🐤🐤🐧 <br>
-				<br>Títol del conte: <input type="text" id="conte3" class="titolconte">
+				<br>Títol del conte: <br>
+				<input type="radio" id="op2-1" name="completa3" value="op1">
+				<label for="op1">L’&agrave;nec i el conill </label><br>
+				<input type="radio" id="op2-2" name="completa3" value="op2">
+				<label for="op2">L’&agrave;nec que només deis Cua </label><br>
+				<input type="radio" id="op2-3" name="completa3" value="op3">
+				<label for="op3">L’aneguet lleig </label><br>
+				<input type="radio" id="op2-4" name="completa3" value="op4">
+				<label for="op4">L’&agrave;nec Renato</label>
 			</div>
-			
+			<form>
 			<div>
 				<input type="button" onclick="validar();" name="submit" value="Comprovar" class="button">
 			</div>
