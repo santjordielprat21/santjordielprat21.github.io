@@ -22,21 +22,19 @@
 			var v = document.getElementById("error");
 			v.style.display = "none";
 		}
-		
+	
 		function validar()
 		{
 			var conte1 = document.getElementById("conte1").value.toLowerCase();
 			var conte2 = document.getElementById("conte2").value.toLowerCase();
 			var conte3 = document.getElementById("conte3").value.toLowerCase();
-			var conte4 = document.getElementById("conte4").value.toLowerCase();
-			var conte5 = document.getElementById("conte5").value.toLowerCase();
+			var conte4 = document.getElementById("conte4").value.toLowerCase();			
 			var conte6 = document.getElementById("conte6").value.toLowerCase();
-			if(conte1=='caperucita roja' &&
+			if(conte1=='caputxeta vermella' &&
 			conte2=='harry potter' &&
 			conte3=='peter pan'&&
-			conte4=='pinocho'&&
-			(conte5=='ratoncito perez' || conte5=='ratoncito pérez' || conte5=='el ratoncito perez' || conte5=='el ratoncito pérez')&&
-			(conte6=='los tres cerditos' || conte6=='los 3 cerditos')
+			conte4=='pinotxo'&&			
+			(conte6=='els tres porquets' || conte6=='els 3 porquets')
 			
 			) correcte();
 			else error();			
@@ -118,42 +116,36 @@
 			<div><img src="https://pratijordi.github.io/sant-jordi-capcalera.jpg" alt="Sant Jordi" class="responsive"></div>
 						
 			<!-- formulari -->
-			<div  class="pregunta">Adivina quién soy...</div>
+			<div  class="pregunta">Endevina qui soc</div>
 						
 			<div class="conte">				
-				De rojo me cubro sin ser amapola, mi abuela y el lobo completan la historia. <br><br>
+				De vermell em cobreixo sense ser rosella, la meva àvia i el llop completen la història. <br><br>
 				<img src="https://pratijordi.github.io/vermella.png" class="responsive">
-				<br>Nombre del personaje: <input type="text" id="conte1" class="titolconte">
+				<br>Nom del personatge: <input type="text" id="conte1" class="titolconte">
 			</div>
 			
 			<div class="conte">
-				Con un rayo en la frente al peor mago hace frente. Con una escoba y una varita en los colegios le imitan. <br><br>
+				Amb un raig al front, al pitjor mag fa front. Amb una escombra i una vareta a les escoles el copien. <br><br>
 				<img src="https://pratijordi.github.io/mag.png" class="responsive">
-				<br>Nombre del personaje: <input type="text" id="conte2" class="titolconte">
+				<br>Nom del personatge: <input type="text" id="conte2" class="titolconte">
 			</div>
 			
 			<div class="conte">
-				Perdí mi sombra, y cuando la encontré, a Wendy me llevé. <br><br>
+				Vaig perdre la meva ombra, i quan la vaig trobar, a Wendy em vaig emportar. <br><br>
 				<img src="https://pratijordi.github.io/peter.jpg" class="responsive">
-				<br>Nombre del personaje: <input type="text" id="conte3" class="titolconte">
+				<br>Nom del personatge: <input type="text" id="conte3" class="titolconte">
 			</div>
 			
 			<div class="conte">
-				De madera era y en niño me convertí. Por decir muchas mentiras me creció la nariz.  <br><br>
+				De fusta era i en nen em vaig convertir. Per dir moltes mentides, em va créixer el nas. <br><br>
 				<img src="https://pratijordi.github.io/gepetto.png" class="responsive">
-				<br>Nombre del personaje: <input type="text" id="conte4" class="titolconte">
+				<br>Nom del personatge: <input type="text" id="conte4" class="titolconte">
 			</div>
 			
 			<div class="conte">
-				Soy un ratón chiquitito, que de noche te visito, me llevo tu dientecito, y te dejo tu regalito.  <br><br>
-				<img src="https://pratijordi.github.io/ratoli.jpg" class="responsive">
-				<br>Nombre del personaje: <input type="text" id="conte5" class="titolconte">
-			</div>
-			
-			<div class="conte">
-				Tres hermanos en su casa, ven al lobo pasar, y por mucho que éste sople, no la logra tirar.   <br><br>
+				Tres germans a casa seva, veuen al llop passar, i per molt que aquest bufi, no l'aconsegueix tirar.  <br><br>
 				<img src="https://pratijordi.github.io/llop2.jpg" class="responsive">
-				<br>Nombre del personaje: <input type="text" id="conte6" class="titolconte">
+				<br>Nom del personatge: <input type="text" id="conte6" class="titolconte">
 			</div>
 			
 			<div>
