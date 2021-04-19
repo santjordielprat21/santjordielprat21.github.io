@@ -25,12 +25,12 @@
 	
 		function validar()
 		{
-			var conte1 = document.getElementById("conte1").value.toLowerCase();
-			var conte2 = document.getElementById("conte2").value.toLowerCase();
-			var conte3 = document.getElementById("conte3").value.toLowerCase();
-			var conte4 = document.getElementById("conte4").value.toLowerCase();			
-			var conte6 = document.getElementById("conte6").value.toLowerCase();
-			if(conte1=='caputxeta vermella' &&
+			var conte1 = document.getElementById("conte1").value.toLowerCase().trim();
+			var conte2 = document.getElementById("conte2").value.toLowerCase().trim();
+			var conte3 = document.getElementById("conte3").value.toLowerCase().trim();
+			var conte4 = document.getElementById("conte4").value.toLowerCase().trim();			
+			var conte6 = document.getElementById("conte6").value.toLowerCase().trim();
+			if((conte1=='caputxeta vermella' || conte1=='la caputxeta vermella') &&
 			conte2=='harry potter' &&
 			conte3=='peter pan'&&
 			conte4=='pinotxo'&&			
